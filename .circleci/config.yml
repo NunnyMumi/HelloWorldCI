@@ -7,8 +7,8 @@ jobs:
       steps:
         - checkout
         - run:
-          name: install
-          command: bundle install
+            name: Install
+            command: bundle install
         - run:
-          name: build
-          command: bundle exec fastlane beta 
+            name: Build
+            command: bundle exec fastlane beta 
