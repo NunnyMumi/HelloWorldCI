@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  
+  build:
+    macos:
+      xcode: "9.2"
+      steps:
+        - checkout
+        - run:
+          name: install
+          command: bundle install
+        - run:
+          name: build
+          command: bundle exec fastlane beta 

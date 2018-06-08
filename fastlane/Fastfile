@@ -19,12 +19,19 @@ platform :ios do
   desc "Description of what the lane does"
   lane :beta do
   	increment_build_number
+  	match(
+  		type: 'adhoc',
+  		app_identifier: ''
+		)
 	gym(
 		project: 'Hello World CI.xcodeproj',
 		scheme: 'Hello World CI',
 		clean: true,
 		export_method: 'ad-hoc'
-	)
-	hockey(api_token: '66062575166d4e94843aa04a2a7d9349')
+		)
+	hockey(
+		api_token: '66062575166d4e94843aa04a2a7d9349'
+		)
+	
 	end
 end
