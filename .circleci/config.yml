@@ -2,13 +2,13 @@ version: 2
 jobs:
   build:
     macos:
-      xcode: "9.2.0"
+      xcode: "9.3.0"
     steps:
         - checkout
 
         - run:
             name: Set Ruby Version
-            command: echo "ruby-2.3.3" > ~/.ruby-versio
+            command: echo "ruby-2.3.3" > ~/.ruby-version
         
         - run:
             name: Install
