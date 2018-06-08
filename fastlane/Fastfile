@@ -20,8 +20,9 @@ platform :ios do
   lane :beta do
   	increment_build_number
   	match(
-  		type: 'adhoc',
-  		app_identifier: ''
+  		readonly: true,
+ 		type: 'adhoc',
+  		app_identifier: 'com.Mfec.Hello-World-CI'
 		)
 	gym(
 		project: 'Hello World CI.xcodeproj',
